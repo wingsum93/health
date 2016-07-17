@@ -9,6 +9,6 @@ import org.xutils.db.annotation.Table;
 @Table(name ="123")
 public class Inpput {
     @Column(name="id",isId = true)
-    private int id ;
+    private int id ;// jkf
 
 }

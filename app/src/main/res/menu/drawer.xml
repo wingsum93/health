@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/navigation_item_1"
+            android:checked="true"
+            android:icon="@drawable/ic_launcher"
+            android:title="Main"/>
+        <item
+            android:id="@+id/navigation_item_2"
+            android:icon="@drawable/ic_launcher"
+            android:title="Simple Evalution"/>
+        <item
+        android:id="@+id/navigation_item_3"
+        android:icon="@drawable/ic_launcher"
+        android:title="Your History"/>
+
+        <item
+            android:id="@+id/navigation_item_4"
+            android:icon="@drawable/ic_launcher"
+            android:title="Login"/>
+    </group>
+</menu>

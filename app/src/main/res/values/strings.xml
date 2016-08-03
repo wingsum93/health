@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Health Life</string>
+    <string name="openDrawer">open</string>
+    <string name="closeDrawer">close</string>
+    <string name="intro">
+        <b>減重的原理很簡單</b>\n\n你吃進去的熱量＞你輸出的熱量＝肥胖\n你吃進去的熱量＜你輪出的熱量＝減輕體重\n每7700卡路里=1公斤\n
+        所以你每多吃進7700卡，理論上就是胖一公斤\n而你每多消秏7700卡，理論上就是會減少一公斤\n
+    </string>
+    <string name="tdee">
+        <b>什麼是基礎代謝?</b>\n\n簡單來說就是指我們一整天躺著２４小時不動的狀態下身體最基本需要消耗的最低熱量，所以表示就算你什麼事都不做你每天也最少要吃進這些熱量，
+        來維持身體機能最基本的運作，每個人的基礎代謝會因為體重跟肌肉比例的不同而有所差異。\n\n
+        一個人每天活動的能量有７０％來自於基礎代謝，而如果我們另外有再吃飯，洗澡，活動，運動等的熱量等需要再外加上去，也就是正常人一天要消秏的熱量。
+    </string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.wayne.androidhealth;
+package com.example.wayne.androidhealth.activity;
 
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -9,6 +9,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.wayne.androidhealth.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView contentView;

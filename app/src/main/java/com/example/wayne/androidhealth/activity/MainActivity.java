@@ -12,18 +12,36 @@ import android.widget.TextView;
 
 import com.example.wayne.androidhealth.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends AppCompatActivity {
-    private TextView contentView;
-    private DrawerLayout drawerLayout;
-    private NavigationView view;
-    private Toolbar toolbar;
+    @BindView(R.id.content_view) protected TextView contentView;
+    @BindView(R.id.drawer_layout) protected DrawerLayout drawerLayout;
+    @BindView(R.id.navigation_view) protected NavigationView view;
+    @BindView(R.id.toolbar) protected Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        init();
-        initController();
+        ButterKnife.bind(this);
+
+        setMyView();
+
+
+
+    }
+
+    public void setMyView(){
+        view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                navigateTo(menuItem);
+                drawerLayout.closeDrawers();
+                return true;
+            }
+        });
 
         setSupportActionBar(toolbar);
         ActionBarDrawerToggle actionBarDrawerToggle = new ActionBarDrawerToggle( this, drawerLayout, toolbar, R.string.openDrawer , R.string.closeDrawer){
@@ -40,23 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
         drawerLayout.setDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
-
-    }
-    public void init(){
-        contentView = (TextView)findViewById(R.id.content_view);
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        view = (NavigationView) findViewById(R.id.navigation_view);
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-    }
-    public void initController(){
-        view.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(MenuItem menuItem) {
-                navigateTo(menuItem);
-                drawerLayout.closeDrawers();
-                return true;
-            }
-        });
     }
     public void navigateTo(MenuItem menuItem){
         int itemId = menuItem.getItemId();

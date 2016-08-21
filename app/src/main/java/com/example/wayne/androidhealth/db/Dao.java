@@ -34,9 +34,7 @@ public class Dao implements DaoAbs {
     public static DaoAbs getInstance() {
         if (mInstance == null) {
             synchronized (Dao.class) {
-                if (mInstance == null) {
-                    mInstance = new Dao();
-                }
+                mInstance = new Dao();
             }
         }
         return mInstance;
@@ -59,6 +57,18 @@ public class Dao implements DaoAbs {
         } catch (DbException e) {
             Log.w(t,e.getCause());
             return new ArrayList<>();
+        }
+    } @Override
+    public AbsorbeCalories absorbeCalories(String abc){
+        try {
+            AbsorbeCalories photos = getDbManager().selector(AbsorbeCalories.class).where("column","=",abc)
+                    .findFirst();
+            if(photos == null)
+                return new AbsorbeCalories();
+            return photos;
+        } catch (DbException e) {
+            Log.w(t,e.getCause());
+            return new AbsorbeCalories();
         }
     }
 

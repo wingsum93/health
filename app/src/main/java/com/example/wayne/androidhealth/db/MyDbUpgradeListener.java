@@ -10,6 +10,8 @@ import org.xutils.DbManager;
 public class MyDbUpgradeListener implements DbManager.DbUpgradeListener {
     @Override
     public void onUpgrade(DbManager db, int oldVersion, int newVersion) {
-
+        if(newVersion>1){
+            
+        }
     }
 }

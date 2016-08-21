@@ -11,7 +11,12 @@ import java.util.List;
  * package name com.example.wayne.androidhealth.db
  */
 public interface DaoAbs {
-
+    //part a
     List<AbsorbeCalories> getAllAbsCar();
+    AbsorbeCalories absorbeCalories(String ab);
     List<ConsumeCalories> getAllComsumeCar();
+
+
+    //part b
+
 }

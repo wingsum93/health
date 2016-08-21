@@ -11,6 +11,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.wayne.androidhealth.R;
+import com.example.wayne.androidhealth.db.Dao;
+import com.example.wayne.androidhealth.db.model.AbsorbeCalories;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setMyView();
-
+        List<AbsorbeCalories> data =  Dao.getInstance().getAllAbsCar();
 
 
     }

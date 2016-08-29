@@ -32,6 +32,7 @@
 
         <!--   for service   -->
         <service android:name=".service.BackgroundService" />
+        <service android:name=".service.DebugSer" />
 
     </application>
 

@@ -11,4 +11,6 @@
         來維持身體機能最基本的運作，每個人的基礎代謝會因為體重跟肌肉比例的不同而有所差異。\n\n
         一個人每天活動的能量有７０％來自於基礎代謝，而如果我們另外有再吃飯，洗澡，活動，運動等的熱量等需要再外加上去，也就是正常人一天要消秏的熱量。
     </string>
+    <string name="label_calory">Calories:</string>
+    <string name="title_dialog_input_calory">Input Calory Dialog</string>
 </resources>

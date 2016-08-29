@@ -22,6 +22,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.InputCaloryAct"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+        <activity
+            android:name=".activity.ShowPhotoActivity"
+            android:theme="@style/Theme.AppCompat.Dialog"/>
+
+
+        <!--   for service   -->
+        <service android:name=".service.BackgroundService" />
+
     </application>
 
 </manifest>
